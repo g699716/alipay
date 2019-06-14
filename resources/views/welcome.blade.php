@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <a href="/alipay/pay">去支付</a>
+                    <a href="/alipay/go">去支付</a>
                 </div>
             </div>
         </div>

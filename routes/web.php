@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 
 Route::prefix('/alipay')->group(function(){
-	Route::get('/pay','AlipayController@pay');
+	Route::get('/go','AlipayController@go');
 });
