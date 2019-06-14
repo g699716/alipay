@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::prefix('/alipay')->group(function(){
+	Route::get('/pay','AlipayController@pay');
+});
