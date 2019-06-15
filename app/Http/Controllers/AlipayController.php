@@ -16,7 +16,7 @@ class AlipayController extends Controller
             'user_id'=>233
         ];
         ksort($data);
-        $string='';
+        $string='?';
         foreach ($data as $k => $v) {
             $string.=$k.'='.$v.'&';
         }
@@ -25,6 +25,7 @@ class AlipayController extends Controller
         $data['sign']=base64_encode($sign);
         $client=new Client();
         $url='http://www.pay.com/rsa3';
+        echo 111;
         // $response=$client->request('post',$url,['form_params'=>$data]);
         // echo $response->getBody();
     }
