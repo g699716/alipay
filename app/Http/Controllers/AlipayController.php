@@ -40,13 +40,11 @@ class AlipayController extends Controller
         openssl_sign($str,$sign,$pri_key,OPENSSL_ALGO_SHA256);
 //        $sign=hash('sha256',$str);
         $data['sign']=base64_encode($sign);
-<<<<<<< HEAD
         $client=new Client();
         $url='http://www.pay.com/rsa3';
         echo 111;
         // $response=$client->request('post',$url,['form_params'=>$data]);
         // echo $response->getBody();
-=======
         $param_str='?';
         foreach ($data as $k => $v){
             $param_str.=$k.'='.urlencode($v).'&';
@@ -54,7 +52,6 @@ class AlipayController extends Controller
         $param=rtrim($param_str,'&');
         $url='https://openapi.alipaydev.com/gateway.do'.$param;
         header('refresh:2;url='.$url);
->>>>>>> c07b05e7e71db8d629415689afe9b2da8f1ffcd9
     }
 
     public function rsa3()
