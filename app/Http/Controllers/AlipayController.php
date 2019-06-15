@@ -51,6 +51,7 @@ class AlipayController extends Controller
 
     public function rsa3()
     {
+        echo 111;
         $data=$_POST;
         $sign=$data['sign'];
         unset($data['sign']);
